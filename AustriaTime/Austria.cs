@@ -102,13 +102,11 @@ namespace AustriaTime
 
         private void alert()
         {
-            sms.Send(["09199508849"]);
+           // sms.Send(["09199508849"]);
             // site is open
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\NOTDIR\alert.wav");
-            for (int i = 0; i < 50; i++)
-            {
-                player.Play();
-            }
+            SoundPlayer player = new SoundPlayer();
+                 player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\alert.wav";
+                 player.Play();
         }
 
         private void button1_Click(object sender, EventArgs e)
