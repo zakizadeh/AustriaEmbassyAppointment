@@ -105,8 +105,11 @@ namespace AustriaTime
            // sms.Send(["09199508849"]);
             // site is open
             SoundPlayer player = new SoundPlayer();
-                 player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\alert.wav";
-                 player.Play();
+ player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\alert.wav";
+ player.Play();
+ // Console.Beep();
+
+  sms.Send(["091900000"], ":) اتریش باز شد- تست پیامک ");
         }
 
         private void button1_Click(object sender, EventArgs e)
